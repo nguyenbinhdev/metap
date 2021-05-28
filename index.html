@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bình Nguyễn</title>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Profile -->
+      <header class="profile">
+        <div class="profile-ava">
+          <img src="./image/ava.png" alt="Avatar" />
+        </div>
+        <div class="profile-decs">
+          <h2 class="decs-name">Bình Nguyễn</h2>
+          <div class="decs-quote">
+            <div class="decs-qoute__static">✌I'm a</div>
+            <ul class="decs-qoute__dynamic">
+              <li><span>Student at HCMUS💕</span></li>
+              <li><span>Sortware developer💻</span></li>
+            </ul>
+          </div>
+          <div class="decs-addcontact">
+            <button>Thêm danh bạ 🤝</button>
+          </div>
+        </div>
+      </header>
+      <!-- SocialLink -->
+      <section class="social-links">
+        <article class="link-item deeper-button">
+          <div class="link-item__ava">
+            <a href="">
+              <img src="./image/Facebook.PNG" alt="Facebook" />
+            </a>
+          </div>
+          <div class="link-item__title">
+            <a href=""> Facebook </a>
+          </div>
+          <span class="hover-effect"></span>
+        </article>
+        <article class="link-item deeper-button">
+          <div class="link-item__ava">
+            <a href="">
+              <img src="./image/Zalo.PNG" alt="Facebook" />
+            </a>
+          </div>
+          <div class="link-item__title">
+            <a href=""> Zalo </a>
+          </div>
+          <span class="hover-effect"></span>
+        </article>
+        <article class="link-item deeper-button">
+          <div class="link-item__ava">
+            <a href="">
+              <img src="./image/Instagram.PNG" alt="Instagram" />
+            </a>
+          </div>
+          <div class="link-item__title">
+            <a href=""> Instagram </a>
+          </div>
+          <span class="hover-effect"></span>
+        </article>
+        <article class="link-item deeper-button">
+          <div class="link-item__ava">
+            <a href="">
+              <img src="./image/Mail.PNG" alt="Instagram" />
+            </a>
+          </div>
+          <div class="link-item__title">
+            <a href=""> Email </a>
+          </div>
+          <span class="hover-effect"></span>
+        </article>
+        <article class="link-item deeper-button">
+          <div class="link-item__ava">
+            <a href="">
+              <img src="./image/Call.PNG" alt="Instagram" />
+            </a>
+          </div>
+          <div class="link-item__title">
+            <a href=""> Call me </a>
+          </div>
+          <span class="hover-effect"></span>
+        </article>
+
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"
+  ></script>
+
+  <script type="text/javascript">
+    var buttonHover = function () {
+      $('.deeper-button').each(function () {
+        $(this).mouseenter(function (e) {
+          var parentOffset = $(this).offset();
+
+          var relX = e.pageX - parentOffset.left;
+          var relY = e.pageY - parentOffset.top;
+          $(this).find('.hover-effect').css({ left: relX, top: relY });
+        });
+
+        $(this).mouseleave(function (e) {
+          var parentOffset = $(this).offset();
+
+          var relX = e.pageX - parentOffset.left;
+          var relY = e.pageY - parentOffset.top;
+          $(this).find('.hover-effect').css({ left: relX, top: relY });
+        });
+      });
+    };
+
+    buttonHover();
+  </script>
+</html>
+
+<!-- description user dùng typying effect -->
+<!-- button hiệu ứng nhỏ giọt -->
