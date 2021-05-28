@@ -1,3 +1,6 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root {
   --primary-color: #222831;
   --secondary-color: #393e46;
@@ -16,10 +19,12 @@ body {
 
 html {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 62.5%;
 }
-
+a {
+  text-decoration: none;
+}
 .app {
   position: relative;
   max-width: 480px;
@@ -40,19 +45,19 @@ html {
       border-radius: 100rem;
       z-index: 1;
       overflow: hidden;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-        background-image: linear-gradient(to right, #1abcf4, #5defb8);
-        border-radius: inherit;
-        transform: scale(1.05);
-        z-index: -1;
-      }
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   z-index: 5;
+      //   background-image: linear-gradient(to right, #1abcf4, #5defb8);
+      //   border-radius: inherit;
+      //   transform: scale(1.1);
+      //   z-index: -1;
+      // }
       &::after {
         content: '';
         width: 14px;
@@ -140,11 +145,13 @@ html {
       }
       .decs-addcontact {
         cursor: pointer;
-        button {
+        a {
           border-radius: 0.5rem;
           padding: 0.25rem 1.2rem;
           background-color: #00adb5;
           color: var(--text-color);
+          font-size: 1.5rem;
+          font-weight: 500;
         }
       }
     }
@@ -180,7 +187,7 @@ html {
         font-weight: 700;
         a {
           font-size: 1.5rem;
-          text-decoration: none;
+
           color: var(--text-color);
         }
       }
@@ -189,7 +196,6 @@ html {
       -webkit-transition: all ease 0.3s;
       transition: all ease 0.3s;
       cursor: pointer;
-
       transition: 0.3s;
       white-space: nowrap;
       /* Effect */
